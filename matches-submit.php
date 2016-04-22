@@ -46,15 +46,6 @@
 		</div>
 		<?php } } ?>
 
-		<div>
-		<ul>
-			<li>
-				<a href="geekluv.php">
-					<img src="back.gif" alt="icon" />
-					Back to front page
-				</a>
-			</li>
-		</ul>
-	</div>
+		<?php footer(); ?>
 	</body>
 </html>

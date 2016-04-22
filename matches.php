@@ -30,7 +30,7 @@
 				<strong>Name:</strong>
 				<input type ="text" name="name" size="16"><br>
 				
-				<!-- sign up - submit button to signup-submit.php -->
+				<!-- sign up - submit button to matches-submit.php -->
 				<input type="submit" value="View My Matches">
 				</fieldset>
 			</form>

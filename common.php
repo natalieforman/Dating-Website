@@ -1,4 +1,5 @@
 <?php 
+	//common code for top banner
 	function topImage(){
 ?>
 	<div id="bannerarea">
@@ -10,6 +11,7 @@
 ?>
 
 <?php
+	//common code for bottom footer
 	function footer(){
 ?>
 	<div>
@@ -94,6 +96,7 @@
 		if (file_exists($check)){
 			$link = $check;
 		}
+		//if they don't have a photo, default male or female
 		else{
 			if($answer[1] == "F"){
 				$link = "images/user.png";
@@ -107,12 +110,12 @@
 ?>
 
 <?php
+	//upload image chosen
 	function uploadPic($target_file, $check_file){
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	   	$check = getimagesize($check_file);
 	    if($check !== false) {
-	        //echo "File is an image - " . $check["mime"] . ".";
 	        $uploadOk = 1;
 	    }
 	    else {
@@ -120,12 +123,10 @@
 	    }
 
 	    if ($uploadOk == 0) {
-		// if everything is ok, try to upload file
-		} else {
-		    if (move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file)) {
-		       //chmod("images/", 0600);
-		       // echo "The file ". basename( $_FILES["pic"]["name"]). " has been uploaded.";
-		    }
+		} 
+		else {
+			// if everything is ok, try to upload file
+		    move_uploaded_file($_FILES["pic"]["tmp_name"], $target_file);
 		}
 	}
 ?>
